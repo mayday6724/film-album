@@ -135,6 +135,7 @@ article{
     box-shadow: 4px 4px 8px rgba(135, 128, 109, 0.75);
     overflow: hidden;
     margin: 0px 0px 20px 0px;
+    mask-image: -webkit-radial-gradient(white, black);
 }
 
 .imgbox{
