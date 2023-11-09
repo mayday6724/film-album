@@ -1,0 +1,241 @@
+@charset "utf-8";
+/*CSS document*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Lobster&family=Lobster+Two&family=Noto+Sans+TC&display=swap');
+
+html{
+    font-size: 16px;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f4f2;
+}
+
+/*header*/
+header{
+    box-sizing: border-box;
+    text-align: center;
+}
+
+header img{
+    display: block;
+    padding: 20px;
+    margin: auto;
+}
+
+/*nav*/
+nav{
+    box-sizing: border-box;
+    padding: 15px;
+    text-align: center;
+    font-family: 'Lobster', sans-serif;
+    font-size: 1.75rem;
+    background-color: rgba(255, 126, 87, 0.75);
+
+    position: sticky;
+    position: -webkit-sticky; /*safari*/
+    top: 0;
+    z-index: 2000;
+}
+
+nav a{
+    text-decoration: none;
+    color: #f6f4f2;
+    padding: 5px 5px;
+    margin-inline: 60px;
+}
+
+nav a:hover{
+    color: #87806d;
+}
+
+nav a:active{
+    color: #535045;
+}
+
+.this_page{
+    text-decoration: none;
+    color: #f6f4f2;
+    padding: 3px 3px;
+    margin-inline: 60px;
+    background-image: linear-gradient(#f6f4f2, #f6f4f2);
+    background-position: center bottom;
+    background-size: 90% 3px;
+    background-repeat: no-repeat;
+   /* transition: background-size 0.25s linear*/
+}
+
+.this_page:hover{
+    background-image: linear-gradient(#87806d, #87806d);
+   /* background-size: 90% 3px;*/
+}
+
+
+/*section*/
+section{
+    position: relative;
+    padding-bottom: 50%;
+}
+
+.left{
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.right{
+    position: absolute;
+    box-sizing: border-box;
+    width: 60%;
+    right: 9%;
+    top: 14%;
+    z-index: 20;
+}
+
+.right h1{
+    font-family: 'Lobster', sans-serif;
+    font-size: 6rem;
+    color: #f6f4f2;
+    text-shadow: 4px 4px 0px #FF7E57;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    text-align: right;
+}
+
+.right p{
+    font-family: 'Lobster Two', sans-serif;
+    font-size: 1.75rem;
+    color: #f6f4f2;
+    text-align: right;
+    margin-block-start: 2px;
+}
+
+/*article*/
+article{
+    width: 80%;
+    margin: auto;
+    column-count: 3;
+    -webkit-column-count: 3; /*safari, chrome, opera*/
+    -moz-column-count: 3; /*firefox*/
+
+    column-gap: 20px;
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+}
+
+.box{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    background-color: #73a1b0;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(135, 128, 109, 0.75);
+    overflow: hidden;
+    margin: 0px 0px 20px 0px;
+}
+
+.imgbox{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.box .imgbox img{
+    float: left;
+    width: 100%;
+
+    transform: scale(1,1);
+    transition: transform 1s;
+    transition-timing-function: ease-in-out;
+    -webkit-transform: scale(1,1); /*safari*/
+    -webkit-transition: transform 1s;
+    -webkit-transition-timing-function: ease-in-out;
+}
+
+.box:hover .imgbox img{
+    transform: scale(1.2,1.2);
+    -webkit-transform: scale(1.2,1.2);
+}
+
+.box h3{
+    font-family: 'Lobster Two', sans-serif;
+    font-weight: 400;
+    font-size: 1.75rem;
+    margin-block-start: 20px;
+    margin-block-end: 0;
+    margin-inline-start: 30px;
+    color: #f6f4f2;
+}
+
+.box p{
+    color: #3c3642;
+    margin-block-start: 0.5em;
+    margin-inline-start: 30px;
+    margin-block-end: 40px;
+}
+
+/*aside*/
+aside{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 100000;
+}
+
+.totop{
+    width: 64px;
+    height: 64px;
+    background: url(../img/totop.png) no-repeat;
+    background-size: 200%;
+    background-position: 0px 0px;
+}
+
+.totop:hover{
+    width: 64px;
+    height: 64px;
+    background: url(../img/totop.png) no repeat;
+    background-size: 200%;
+    background-position: -64px 0px;
+}
+
+/*footer*/
+footer p{
+    text-align:center;
+}
+
+/*small devices*/
+@media (max-width: 767px){
+    nav, .right p, .box h3{
+        font-size: 1.25rem;    
+    }
+    
+    .right h1{
+        font-size: 3rem;
+    }
+
+    .box p, footer p{
+        font-size: 0.75rem
+    }
+
+    article{
+        width: 70%;
+        column-count: 1;
+        -webkit-column-count: 1; /*safari, chrome, opera*/
+        -moz-column-count: 1; /*firefox*/
+    }
+}
+
+/*medium devices*/
+@media (min-width: 768px) and (max-width: 991px){
+    nav, .right p, .box h3{
+        font-size: 1.5rem;    
+    }
+    
+    .right h1{
+        font-size: 5rem;
+    }
+}
+
